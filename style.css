@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Poppins', sans-serif; 
     margin: 0px;
@@ -5,12 +6,15 @@
     box-sizing: border-box;
 
 } 
+
 .container {
     margin: auto;
     display: flex;
     max-width: 1080px;
     height: 100%;
     flex-wrap: wrap;
+
+    /* it restricts every section into one width */
 }
 
 /* navigation bar */
@@ -18,10 +22,12 @@
 nav {
     height: 70px;
     background-color: #7DCEA0 ;
+    border-bottom: 5px solid white;
 }
 
 nav > .container {
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
@@ -36,12 +42,19 @@ ul {
 }
 
 li {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
     margin-left: 10px;
+    cursor: pointer;
 
 }
+
+
+li:hover {
+    color: #424949;
+}
+
 
 /* header */
 
@@ -49,11 +62,12 @@ header {
     min-height: 450px; 
     background-color: #7DCEA0;
     display: flex;
+
 }
+
 .front-text {
     font-size: 48px;
     line-height: 1.2;
-
 }
 
 .text-container {
@@ -62,41 +76,44 @@ header {
     flex: 0 1 500px;
     color: white;
     row-gap: 10px;
-
     align-self: flex-start; 
 }
 
-.separator {
+header > .container {
     justify-content: space-between;
 
 }
+
 .text-container + img {
     max-width: 500px;
     max-height: 500px;
     border-radius: 20px;
-    box-shadow: 10jpx 0px 10px black;
+    box-shadow: 10px 0px 10px black;
     box-shadow: 0px 10px 10px black;
-
 }
 
-.buttons {
+.header-buttons {
     display: flex;
     column-gap: 10px;
 }
-button {
 
+button {
     flex: 0 1 auto;
     height: 35px;
     width: 100px;
-    border: 1px solid royalblue;
     border-radius: 5px;
+    border: none;
     background-color: royalblue;
     display:flex;
     align-items: center;
     justify-content: center;
-
     box-shadow: 2px 2px 0px white;
 }
+
+.header-buttons > button:hover {
+    background-color: rgb(53, 83, 173);
+}
+
 
 a {
     text-decoration: none;
@@ -107,7 +124,7 @@ a {
     font-size: 16px;
 }
 
-/* section 1  */
+/* info section 1  */
 
 .section1-header {
     text-align: center;
@@ -145,7 +162,7 @@ section {
     width: 225px;
 }
 
-.section1 > .container {
+.info-section > .container {
     justify-content: space-between;
     align-content: flex-start;
     row-gap: 30px;
@@ -153,7 +170,7 @@ section {
 }
 
 
-.section1 > .container > div {
+.info-section > .container > div {
     flex: 0 1 auto;
     display: flex;
     flex-direction: column;
@@ -189,7 +206,7 @@ section {
 
 /* modal */
 
-section > .container {
+.modal-section > .container {
     align-items: center;
 }
 
@@ -214,9 +231,16 @@ section > .container {
     box-shadow: none;
     border: 2px solid white;
     flex: 0 1 auto;
+    cursor: pointer;
+}
 
+.modal-button:hover {
+    background-color: white;
+    color: royalblue;
+    font-weight: bold;
 }
 /* footer */
+
 footer {
     height: 80px;
     background-color: #424949;
